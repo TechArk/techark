@@ -1,0 +1,23 @@
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/4.8/phpunit.xsd"
+         bootstrap="vendor/autoload.php">
+  <php>
+    <var name="PHPUNIT_TEST_SETTINGS_HANDLER" value="\Xtuple\Drupal7\DrupalPHPUnitTestSettings"/>
+    <var name="DRUPAL_SETTINGS_FILE_PATH" value="config/settings.php"/>
+    <var name="ERP_SETTINGS_FILE_PATH" value="config/environment.php"/>
+  </php>
+  <testsuites>
+    <testsuite name="xdruple">
+      <directory>drupal/extensions/profiles/xdruple/tests</directory>
+    </testsuite>
+    <testsuite name="project">
+      <directory>tests</directory>
+    </testsuite>
+  </testsuites>
+  <filter>
+    <whitelist processUncoveredFilesFromWhitelist="false">
+      <directory>drupal/extensions/profiles/xdruple/src</directory>
+      <directory>src</directory>
+    </whitelist>
+  </filter>
+</phpunit>

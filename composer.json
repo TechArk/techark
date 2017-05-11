@@ -1,0 +1,29 @@
+{
+  "name": "xtuple/xdruple-drupal",
+  "type": "project",
+  "description": "xTuple Drupal project",
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-0": {
+      "": "src/"
+    }
+  },
+  "require": {
+    "profiles/xdruple": "dev-master"
+  },
+  "require-dev": {
+    "composer/composer": "~1.0@dev",
+    "phpunit/phpunit": "^4.8.23"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "satis.codedrivendrupal.com"
+    }
+  ],
+  "scripts": {
+    "post-create-project-cmd": [
+      "cp drupal/extensions/profiles/xdruple/dist/console.php.dist ./console.php && chmod +x ./console.php"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+# Composer (vendors)
+vendor
+drupal/*
+!drupal/project
+
+# Configuration
+config/environment.php
+config/settings.php
+
+# User-generated content
+web
+
+.DS_Store
